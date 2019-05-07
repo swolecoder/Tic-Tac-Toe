@@ -13,19 +13,12 @@ const styles = {
   verticalAlign: 'top'
 };
 
-class Square extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentBoard: 0 };
-  }
-
-  render() {
-    return (
-      <div style={styles} onClick={this.props.handleClick}>
-        {this.props.value}
-      </div>
-    );
-  }
-}
+const Square = props => {
+  return (
+    <div style={styles} onClick={props.handleClick}>
+      {props.value}
+    </div>
+  );
+};
 
 export default Square;
