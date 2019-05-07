@@ -13,19 +13,11 @@ const styles = {
   verticalAlign: 'top'
 };
 
-// const tiles = ['', '0', 'X'];
-
 class Square extends Component {
   constructor(props) {
     super(props);
     this.state = { currentBoard: 0 };
   }
-
-  // handleClick() {
-  //   this.setState(prevState => {
-  //     return { currentBoard: (prevState.currentBoard + 4) % 3 };
-  //   });
-  // }
 
   render() {
     return (
