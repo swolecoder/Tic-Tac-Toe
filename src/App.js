@@ -20,28 +20,25 @@ class App extends Component {
       [0, 4, 8],
       [2, 4, 6]
     ];
-
     for (let i = 0; i < winningConditions.length; i++) {
       const [a, b, c] = winningConditions[i];
-
-      if (board[a] !== '' && board[a] === board[b] && board[a] === board[c]) {
+      //check if someone has won
+      if (board[a] !== '' && board[a] === board[b] && board[b] === board[c]) {
         return board[a];
       }
-
-      //check if the board is full
-      let isBoardFull = true;
-      for (let i = 0; i < board.length; i++) {
-        if (board[i] === '') {
-          isBoardFull = false;
-          break;
-        }
+    }
+    //check if the board is full
+    let isBoardFull = true;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === '') {
+        isBoardFull = false;
+        break;
       }
-
-      if (!isBoardFull) {
-        return '';
-      } else {
-        return 'tie';
-      }
+    }
+    if (!isBoardFull) {
+      return '';
+    } else {
+      return 'tie';
     }
   }
 
